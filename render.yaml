@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: geminicli2api
+    env: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 8888
+      - key: GEMINI_AUTH_PASSWORD
+        sync: false
+      - key: GEMINI_CREDENTIALS
+        sync: false
